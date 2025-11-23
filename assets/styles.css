@@ -277,75 +277,68 @@ body.lb-open{ overflow:hidden; }
 /* ===== POPRAWKI RWD (Mobile & Tablet) ===== */
 /* ========================================== */
 
-/* Ustawienia dla tabletów i telefonów (poniżej 1024px) */
 @media (max-width: 1024px) {
+  /* 1. Naprawa HERO: Układ pionowy, bez nakładania */
   section.hero {
-    grid-template-columns: 1fr;
-    max-width: none;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
-    /* Zmniejszamy wysokość Hero, bo na telefonie 92vh to za dużo */
+    display: flex;
+    flex-direction: column; /* Elementy jeden pod drugim */
     min-height: auto;
-    padding-bottom: 40px;
+    height: auto; /* Wysokość dopasowana do treści */
+    max-width: none;
+    margin: 10px;
+    padding-bottom: 30px; /* Odstęp od dołu */
+    background: #fff; /* Czyste tło bez dziwnych gradientów */
   }
-  /* Zdjęcie tła na telefonie ustawiamy niżej, żeby nie zasłaniało tekstu */
-  .hero .photo {
-    inset: 0;
-    top: 45%; /* Startuje od połowy ekranu */
-    bottom: 0;
-    width: 100%;
-  }
-  /* Dodajemy cień pod tekst na Hero, żeby był czytelny na tle zdjęcia */
+
+  /* 2. Tekst: Na górze, czysty i czytelny */
   .hero-grid {
-    position: relative;
-    z-index: 2;
-    /* Białe tło z gradientem pod tekst, żeby był czytelny */
-    background: linear-gradient(180deg, #fff 0%, #fff 70%, rgba(255,255,255,0) 100%);
-    padding: 20px 10px 80px 10px;
-    margin-top: 0;
+    order: 1; /* Tekst pierwszy */
+    margin-top: 10px;
+    padding: 10px 5px;
+    background: transparent;
   }
-  #omnie .wrap {
-    grid-template-columns: 1fr;
+
+  .hero h1 {
+    font-size: 32px; /* Nieco mniejszy nagłówek na małe ekrany */
   }
+
+  /* 3. Zdjęcie Kasi: Pod tekstem, jako osobny element */
+  .hero .photo {
+    position: relative; /* Przywracamy go do "przepływu" dokumentu */
+    order: 2; /* Zdjęcie drugie */
+    inset: auto; /* Resetujemy pozycjonowanie absolutne */
+    width: 100%;
+    height: 400px; /* Stała wysokość zdjęcia */
+    border-radius: 20px;
+    margin-top: 20px;
+    background-position: center top; /* Ustawienie na twarz */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Lekki cień */
+  }
+  
+  /* Resetujemy gradient na zdjęciu */
+  .hero .photo::after { display: none; }
+  
+  /* Układ O Mnie - też jeden pod drugim */
+  #omnie .wrap { grid-template-columns: 1fr; }
 }
 
-/* Ustawienia dla mniejszych tabletów i telefonów (poniżej 900px) – tu naprawiamy Header */
 @media (max-width: 900px) {
-  /* Zmieniamy układ nagłówka na pionowy: Logo na górze, Menu pod spodem */
-  .subhead-inner {
-    flex-direction: column;
-    gap: 16px;
-    padding-bottom: 16px;
-  }
+  /* Header pionowy */
+  .subhead-inner { flex-direction: column; gap: 16px; padding-bottom: 16px; }
+  .nav { justify-content: center; gap: 8px; width: 100%; }
   
-  /* Menu: wyśrodkowane i mniejsze odstępy */
-  .nav {
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-  }
-  
-  /* Przyciski menu: mniejsze, żeby się mieściły */
+  /* Mniejsze przyciski menu */
   .pill {
     font-size: 13px;
-    padding: 6px 12px;
-    border: 1px solid #eee; /* Delikatniejsza ramka */
-    flex-grow: 1; /* Rozciągnij równo */
-    justify-content: center;
+    padding: 8px 12px;
+    border: 1px solid #eee;
+    flex-grow: 1;
     text-align: center;
-    white-space: nowrap;
   }
-  
-  /* Zmniejszamy logo na telefonie */
-  .brand b { font-size: 20px; }
 }
 
-/* Ustawienia tylko dla telefonów (poniżej 600px) */
 @media (max-width: 600px) {
-  .container { padding: 20px 16px; }
-  .hero h1 { font-size: 34px; }
-  .cta-row { justify-content: center; }
+  .hero .photo { height: 320px; } /* Mniejsze zdjęcie na małych telefonach */
+  .cta-row, .badges { justify-content: center; }
   .cta, .ghost { width: 100%; justify-content: center; }
-  .badges { justify-content: center; }
 }
