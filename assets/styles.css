@@ -363,25 +363,45 @@ body.lb-open{ overflow:hidden; }
   .nav { justify-content: center; gap: 6px; width: 100%; }
   .pill { font-size: 12px; padding: 6px 10px; flex-grow: 1; text-align: center; border-color: #eee; }
 
-  /* --- NAPRAWA CENNIKA (NOWE) --- */
-  /* Zmniejszamy odstępy w tabeli, żeby cena nie spadała do nowej linii */
-  .price th, .price td {
-    padding: 12px 4px; /* Mniej po bokach */
-    font-size: 14px;   /* Troszkę mniejsza czcionka */
+/* --- NAPRAWA CENNIKA (WERSJA PANCERNA) --- */
+  
+  /* 1. Kontener tabeli */
+  .price-wrap {
+    width: 100%;
+    overflow-x: hidden; /* Blokujemy przewijanie na boki, ma się zmieścić! */
+  }
+
+  /* 2. Sama tabela - wymuszamy układ */
+  table.price {
+    width: 100%;
+    table-layout: fixed; /* KLUCZOWE: Sztywne trzymanie szerokości kolumn */
+  }
+
+  /* 3. Kolumny */
+  /* Kolumna z nazwą zabiegu (lewa) - zajmuje resztę miejsca i zawija tekst */
+  .price td:first-child {
+    width: auto;
+    white-space: normal; /* Pozwól na zawijanie tekstu do nowej linii */
+    padding: 10px 4px;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  /* Kolumna z ceną (prawa) - sztywna szerokość, bez zawijania */
+  .price td.p-right {
+    width: 75px; /* Ustalamy sztywno: 75px na cenę wystarczy */
+    white-space: nowrap;
+    padding: 10px 4px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+    vertical-align: top; /* Cena zawsze na górze, nawet jak nazwa ma 3 linie */
   }
   
   /* Nagłówki kategorii (np. Pielęgnacja Twarzy) */
   .price th {
-    padding-top: 20px;
+    padding-top: 24px;
+    padding-bottom: 8px;
     font-size: 16px;
-    border-bottom: 2px solid var(--gold); /* Wyraźniejsze oddzielenie */
+    border-bottom: 2px solid var(--gold);
   }
-
-  /* Kolumna z ceną */
-  .price .p-right {
-    white-space: nowrap; /* Wymuś jedną linię */
-    font-weight: 700;
-    width: 85px; /* Sztywna szerokość dla ceny */
-    text-align: right;
-  }
-}
