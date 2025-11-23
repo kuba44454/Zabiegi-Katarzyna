@@ -304,20 +304,19 @@ body.lb-open{ overflow:hidden; }
   #omnie .wrap { grid-template-columns: 1fr; }
 }
 
-/* TELEFONY - Wersja Minimalistyczna (To o co prosiłeś) */
+/* TELEFONY - Wersja Minimalistyczna + Naprawa Cennika */
 @media (max-width: 600px) {
-  /* 1. Hero na cały ekran telefonu */
+  /* --- HERO --- */
   section.hero {
     display: block;
     position: relative;
-    min-height: 85vh; /* Wysokość na 85% ekranu */
+    min-height: 85vh; 
     margin: 0;
     border-radius: 0;
     box-shadow: none;
     overflow: hidden;
   }
 
-  /* 2. Zdjęcie jako TŁO (na całe pole) */
   .hero .photo {
     position: absolute;
     inset: 0;
@@ -326,17 +325,15 @@ body.lb-open{ overflow:hidden; }
     margin: 0;
     border-radius: 0;
     z-index: 0;
-    background-position: center top !important; /* Żeby nie ucinało głowy */
+    background-position: center top !important; 
     background-size: cover !important;
   }
 
-  /* Gradient od dołu, żeby tekst był czytelny na tle zdjęcia */
   .hero .photo::after {
     display: block;
     background: linear-gradient(to top, rgba(255,255,255,1) 20%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%);
   }
 
-  /* 3. Tekst przyklejony do dołu */
   .hero .container {
     position: absolute;
     bottom: 0;
@@ -348,29 +345,43 @@ body.lb-open{ overflow:hidden; }
 
   .hero-grid { margin: 0; gap: 12px; }
   
-  /* 4. Minimalizm: Mniejszy nagłówek, wyśrodkowany */
   .hero h1 {
-    font-size: 26px; /* Mniejsza czcionka */
+    font-size: 26px; 
     margin-bottom: 8px;
     text-align: center;
     color: var(--ink);
   }
   
-  /* Wyśrodkowanie "kosmetologia laser" */
   .kicker { text-align: center; font-size: 12px; margin-bottom: 4px; opacity: 0.8; }
-
-  /* 5. UKRYWAMY opis (Oczyszczanie aktywne...) */
   .lead { display: none; }
 
-  /* Wyśrodkowanie guzików i statystyk */
   .cta-row { justify-content: center; margin-top: 12px; }
   .hero-grid > div > div[style*="display:flex"] { justify-content: center; font-size: 12px; }
-  
-  /* Badges (sociale) też można ukryć lub zmniejszyć dla czystości */
   .badges { justify-content: center; margin-top: 10px; transform: scale(0.9); }
   
-  /* Header na telefonie */
   .subhead-inner { flex-direction: column; gap: 10px; padding-bottom: 10px; }
   .nav { justify-content: center; gap: 6px; width: 100%; }
   .pill { font-size: 12px; padding: 6px 10px; flex-grow: 1; text-align: center; border-color: #eee; }
+
+  /* --- NAPRAWA CENNIKA (NOWE) --- */
+  /* Zmniejszamy odstępy w tabeli, żeby cena nie spadała do nowej linii */
+  .price th, .price td {
+    padding: 12px 4px; /* Mniej po bokach */
+    font-size: 14px;   /* Troszkę mniejsza czcionka */
+  }
+  
+  /* Nagłówki kategorii (np. Pielęgnacja Twarzy) */
+  .price th {
+    padding-top: 20px;
+    font-size: 16px;
+    border-bottom: 2px solid var(--gold); /* Wyraźniejsze oddzielenie */
+  }
+
+  /* Kolumna z ceną */
+  .price .p-right {
+    white-space: nowrap; /* Wymuś jedną linię */
+    font-weight: 700;
+    width: 85px; /* Sztywna szerokość dla ceny */
+    text-align: right;
+  }
 }
