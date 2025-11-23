@@ -126,13 +126,11 @@ section.hero{
 /* --- GRID KAFELKÓW (Zaktualizowany) --- */
 .grid {
   display: grid;
-  /* Domyślnie (Mobile/Tablet/Laptop) */
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
 }
 
 @media (min-width: 1440px) {
-  /* Na dużych ekranach kafelki mogą być szersze */
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px;
@@ -275,14 +273,79 @@ body.lb-open{ overflow:hidden; }
 .map{width:100%;height:520px;border:0}
 @media (max-width:640px){ .map{height:380px} }
 
-/* ===== RWD ===== */
-@media (max-width:1024px){
-  section.hero{grid-template-columns:1fr; max-width:none; margin:0; border-radius:0; box-shadow:none; min-height:92vh;}
-  .hero .photo{inset:40% 0 0 0}
-  #omnie .wrap{grid-template-columns:1fr}
+/* ========================================== */
+/* ===== POPRAWKI RWD (Mobile & Tablet) ===== */
+/* ========================================== */
+
+/* Ustawienia dla tabletów i telefonów (poniżej 1024px) */
+@media (max-width: 1024px) {
+  section.hero {
+    grid-template-columns: 1fr;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    /* Zmniejszamy wysokość Hero, bo na telefonie 92vh to za dużo */
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+  /* Zdjęcie tła na telefonie ustawiamy niżej, żeby nie zasłaniało tekstu */
+  .hero .photo {
+    inset: 0;
+    top: 45%; /* Startuje od połowy ekranu */
+    bottom: 0;
+    width: 100%;
+  }
+  /* Dodajemy cień pod tekst na Hero, żeby był czytelny na tle zdjęcia */
+  .hero-grid {
+    position: relative;
+    z-index: 2;
+    /* Białe tło z gradientem pod tekst, żeby był czytelny */
+    background: linear-gradient(180deg, #fff 0%, #fff 70%, rgba(255,255,255,0) 100%);
+    padding: 20px 10px 80px 10px;
+    margin-top: 0;
+  }
+  #omnie .wrap {
+    grid-template-columns: 1fr;
+  }
 }
-@media (max-width:768px){
-  .nav{gap:10px}
-  .pill{padding:8px 12px}
-  .lead{font-size:16px}
+
+/* Ustawienia dla mniejszych tabletów i telefonów (poniżej 900px) – tu naprawiamy Header */
+@media (max-width: 900px) {
+  /* Zmieniamy układ nagłówka na pionowy: Logo na górze, Menu pod spodem */
+  .subhead-inner {
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 16px;
+  }
+  
+  /* Menu: wyśrodkowane i mniejsze odstępy */
+  .nav {
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  /* Przyciski menu: mniejsze, żeby się mieściły */
+  .pill {
+    font-size: 13px;
+    padding: 6px 12px;
+    border: 1px solid #eee; /* Delikatniejsza ramka */
+    flex-grow: 1; /* Rozciągnij równo */
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  /* Zmniejszamy logo na telefonie */
+  .brand b { font-size: 20px; }
+}
+
+/* Ustawienia tylko dla telefonów (poniżej 600px) */
+@media (max-width: 600px) {
+  .container { padding: 20px 16px; }
+  .hero h1 { font-size: 34px; }
+  .cta-row { justify-content: center; }
+  .cta, .ghost { width: 100%; justify-content: center; }
+  .badges { justify-content: center; }
 }
