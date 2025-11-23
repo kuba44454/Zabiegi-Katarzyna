@@ -1,0 +1,179 @@
+[
+  {
+    "category": "Pielęgnacja Twarzy",
+    "slug": "konsultacja",
+    "title": "Konsultacja kosmetologiczna",
+    "desc": "Omówienie planu zabiegowego i dobór pielęgnacji.",
+    "variants": [
+      {"name": "Konsultacja", "price": 0}
+    ]
+  },
+  {
+    "category": "Pielęgnacja Twarzy",
+    "slug": "wodorowe",
+    "title": "Oczyszczanie wodorowe",
+    "desc": "Dogłębne oczyszczanie, nawilżanie i rewitalizacja skóry.",
+    "variants": [
+      {"name": "Plecy", "price": 350},
+      {"name": "3w1 Twarz", "price": 150},
+      {"name": "3w1 Twarz + Szyja", "price": 170},
+      {"name": "3w1 Twarz + Szyja + Dekolt", "price": 200},
+      {"name": "6w1 Twarz", "price": 300},
+      {"name": "6w1 Twarz + Szyja", "price": 330},
+      {"name": "6w1 Twarz + Szyja + Dekolt", "price": 350}
+    ]
+  },
+  {
+    "category": "Pielęgnacja Twarzy",
+    "slug": "black-doll",
+    "title": "Peeling węglowy „Black Doll”",
+    "desc": "Laserowe oczyszczanie i zwężanie porów z maską węglową.",
+    "variants": [
+      {"name": "Twarz / Szyja / Dekolt (1 partia)", "price": 250},
+      {"name": "Twarz + Szyja", "price": 270},
+      {"name": "Twarz + Szyja + Dekolt", "price": 300},
+      {"name": "Plecy", "price": 350}
+    ]
+  },
+  {
+    "category": "Pielęgnacja Twarzy",
+    "slug": "mezoterapia-nano",
+    "title": "Mezoterapia nanoigłowa",
+    "desc": "Bezinwazyjne wprowadzanie substancji aktywnych.",
+    "variants": [
+      {"name": "Okolice oczu", "price": 150},
+      {"name": "Twarz", "price": 250},
+      {"name": "Twarz + Szyja", "price": 350},
+      {"name": "Twarz + Szyja + Dekolt", "price": 450}
+    ]
+  },
+  {
+    "category": "Pielęgnacja Twarzy",
+    "slug": "rf-infuzja",
+    "title": "Zabiegi Pielęgnacyjne & RF",
+    "desc": "Nawilżanie, lifting falami radiowymi i zabiegi bankietowe.",
+    "variants": [
+      {"name": "Zabieg nawilżający (Infuzja tlenowa)", "price": 200},
+      {"name": "Fale radiowe (RF) - Twarz", "price": 200},
+      {"name": "Zabieg bankietowy (przed makijażem)", "price": 130}
+    ]
+  },
+  {
+    "category": "Terapie Laserowe (IPL)",
+    "slug": "fotoodmladzanie",
+    "title": "Fotoodmładzanie IPL",
+    "desc": "Redukcja zmarszczek, poprawa kolorytu i gęstości skóry.",
+    "variants": [
+      {"name": "Dłonie", "price": 100},
+      {"name": "Twarz", "price": 200},
+      {"name": "Twarz + Szyja", "price": 300},
+      {"name": "Twarz + Szyja + Dekolt", "price": 500},
+      {"name": "Pakiet 3x Twarz", "price": 500},
+      {"name": "Pakiet 3x Twarz + Szyja", "price": 700},
+      {"name": "Pakiet 3x Twarz + Szyja + Dekolt", "price": 1200}
+    ]
+  },
+  {
+    "category": "Terapie Laserowe (IPL)",
+    "slug": "naczynka",
+    "title": "Zamykanie naczynek",
+    "desc": "Redukcja „pajączków” i rumienia.",
+    "variants": [
+      {"name": "Małe obszary (np. nos/broda)", "price": 150},
+      {"name": "Cała twarz", "price": 500},
+      {"name": "Pakiet 3x Twarz", "price": 1200}
+    ]
+  },
+  {
+    "category": "Terapie Laserowe (IPL)",
+    "slug": "przebarwienia",
+    "title": "Usuwanie przebarwień",
+    "desc": "Redukcja plam posłonecznych i hormonalnych.",
+    "variants": [
+      {"name": "Mały obszar", "price": 100},
+      {"name": "Czoło / Policzki", "price": 200},
+      {"name": "Cała twarz", "price": 500},
+      {"name": "Twarz + Szyja + Dekolt", "price": 1000},
+      {"name": "Pakiet 3x Cała twarz", "price": 1300}
+    ]
+  },
+  {
+    "category": "Terapie Laserowe (IPL)",
+    "slug": "tradzik",
+    "title": "Leczenie trądziku",
+    "desc": "Terapia światłem redukująca stany zapalne.",
+    "variants": [
+      {"name": "Twarz", "price": 250},
+      {"name": "Plecy", "price": 300},
+      {"name": "Pakiet 3x Twarz", "price": 650},
+      {"name": "Pakiet 3x Plecy", "price": 800}
+    ]
+  },
+  {
+    "category": "Laserowe Usuwanie",
+    "slug": "tatuaz-pmu",
+    "title": "Usuwanie makijażu permanentnego lub tatuażu",
+    "desc": "Rozjaśnianie i usuwanie makijażu permanentnego oraz tatuaży.",
+    "variants": [
+      {"name": "1 zabieg", "price": 200},
+      {"name": "Pakiet 3 zabiegów", "price": 550},
+      {"name": "Tatuaż mały (do 5 cm)", "price": 200},
+      {"name": "Tatuaż średni (5-10 cm)", "price": 400},
+      {"name": "Tatuaż duży (10-20 cm)", "price": 600},
+      {"name": "Tatuaż duży (powyżej 20 cm)", "price": 800}
+    ]
+  },
+  {
+    "category": "Depilacja Laserowa",
+    "slug": "depilacja-twarz",
+    "title": "Depilacja - Twarz",
+    "desc": "Trwała redukcja owłosienia.",
+    "variants": [
+      {"name": "Wąsik / Przestrzeń brwi", "price": 40},
+      {"name": "Baki", "price": 50},
+      {"name": "Broda", "price": 70},
+      {"name": "Cała twarz", "price": 150}
+    ]
+  },
+  {
+    "category": "Depilacja Laserowa",
+    "slug": "depilacja-cialo",
+    "title": "Depilacja - Ciało",
+    "desc": "Pachy, bikini, nogi i inne partie.",
+    "variants": [
+      {"name": "Pachy", "price": 100},
+      {"name": "Plecy", "price": 150},
+      {"name": "Klatka Piersiowa", "price": 150},
+      {"name": "Bikini płytkie", "price": 150},
+      {"name": "Bikini głębokie", "price": 200},
+      {"name": "Łydki / Uda", "price": 200},
+      {"name": "Całe nogi", "price": 350},
+      {"name": "Całe ręce", "price": 200}
+    ]
+  },
+  {
+    "category": "Depilacja Laserowa",
+    "slug": "depilacja-pakiety",
+    "title": "Depilacja - Pakiety",
+    "desc": "Najkorzystniejsze opcje łączone.",
+    "variants": [
+      {"name": "Bikini + Pachy (lub Twarz)", "price": 250},
+      {"name": "Całe nogi + Pachy (lub Ręce)", "price": 400},
+      {"name": "Pachy + Nogi całe + Bikini", "price": 600},
+      {"name": "SERIA 5: Całe nogi + Pachy", "price": 1500},
+      {"name": "SERIA 5: Pachy + Nogi + Bikini", "price": 2500}
+    ]
+  },
+  {
+    "category": "Modelowanie Sylwetki",
+    "slug": "endermomasaz",
+    "title": "Endermomasaż",
+    "desc": "Masaż podciśnieniowy na cellulit i ujędrnienie.",
+    "variants": [
+      {"name": "Seria 5: Ramiona", "price": 400},
+      {"name": "Seria 5: Brzuch", "price": 450},
+      {"name": "Seria 5: Uda", "price": 500},
+      {"name": "Seria 5: Uda + Pośladki", "price": 650}
+    ]
+  }
+]

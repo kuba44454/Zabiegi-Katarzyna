@@ -1,0 +1,72 @@
+[
+  {
+    "service": "Wybierzemy zabieg na miejscu",
+    "author": "Jolanta T",
+    "date": "2025-08-05",
+    "stars": 5,
+    "text": "Profesjonalnie i z sercem. Po oczyszczaniu wodorowym cera gładsza i rozświetlona, realne efekty. Świetna, spokojna atmosfera – bardzo polecam!"
+  },
+  {
+    "service": "Oczyszczanie wodorowe podstawowe 3w1",
+    "author": "Klaudia F",
+    "date": "2025-07-08",
+    "stars": 5,
+    "text": "Za każdym razem miło i profesjonalnie. Szczerze polecam."
+  },
+  {
+    "service": "Oczyszczanie wodorowe 3w1",
+    "author": "Kasia B",
+    "date": "2024-10-30",
+    "stars": 5,
+    "text": "Wspaniała opieka i zaangażowanie, skóra w lepszej kondycji. Będę wracać regularnie."
+  },
+  {
+    "service": "Peeling węglowy „Black Doll”",
+    "author": "Joanna K",
+    "date": "2024-09-01",
+    "stars": 5,
+    "text": "Bezbolesny zabieg, wszystko wytłumaczone krok po kroku. Przemiła atmosfera i czysty gabinet."
+  },
+  {
+    "service": "Wybierzemy zabieg na miejscu",
+    "author": "Klaudia K",
+    "date": "2024-08-15",
+    "stars": 5,
+    "text": "Pani Kasia wszystko tłumaczy, dba o komfort. Polecam bardzo!"
+  },
+  {
+    "service": "Oczyszczanie wodorowe rozszerzone 6w1",
+    "author": "Martyna U",
+    "date": "2024-06-02",
+    "stars": 5,
+    "text": "Najlepszy zabieg – cudowne odczucia i super efekty."
+  },
+  {
+    "service": "Oczyszczanie twarzy",
+    "author": "Kinga C",
+    "date": "2023-05-23",
+    "stars": 5,
+    "text": "Miła atmosfera, skóra odżyła i nabrała blasku. Zalecenia dobrane do potrzeb."
+  },
+  {
+    "service": "Peeling kawitacyjny",
+    "author": "Irena W",
+    "date": "2023-07-14",
+    "stars": 5,
+    "text": "Fachowa obsługa, pełna estetyka i profesjonalizm. Zabiegi dobrane do rodzaju cery."
+  },
+  {
+    "service": "Sonoforeza",
+    "author": "Lidia W",
+    "date": "2023-02-28",
+    "stars": 5,
+    "text": "Po mezoterapii i sonoforezie twarz wyraźnie odmłodzona. Na pewno wrócę."
+  },
+  {
+    "service": "Liposukcja ultradźwiękowa",
+    "author": "Alicja W",
+    "date": "2023-02-14",
+    "stars": 5,
+    "text": "Kolejny zabieg i znowu świetne rezultaty. Pani Kasia wszystko dopina – bardzo polecam."
+  }
+]

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zabiegi Katarzyna — Ekspercka Kosmetologia & Laser w Szczecinie</title>
+
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Zabiegi Katarzyna. Kosmetologia i zabiegi laserowe w Szczecinie: oczyszczanie wodorowe, infuzja tlenowa, fotoodmładzanie, depilacja laserowa.">
+  <meta name="theme-color" content="#c8a75a">
+
+  <link rel="preload" as="image" href="assets/img/kasia.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BeautySalon",
+    "name":"Zabiegi Katarzyna",
+    "image":"assets/img/kasia.png",
+    "address":{"@type":"PostalAddress","streetAddress":"Zoologiczna 31","addressLocality":"Szczecin","postalCode":"70-791","addressCountry":"PL"},
+    "telephone":"+48 601 827 531",
+    "url":"https://www.mikbeauty.pl/",
+    "sameAs":["https://www.instagram.com/mik__beauty/","https://www.facebook.com/profile.php?id=100087314075394"],
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"159"}
+  }
+  </script>
+</head>
+<body>
+
+  <div id="site-header" data-include="components/header.html"></div>
+
+  <section class="hero">
+    <div class="photo" id="heroPhoto" data-bg="assets/img/kasia.png" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="kicker">Kosmetologia • Laser</div>
+          <h1>Kasia — spersonalizowana pielęgnacja, która <span class="gold">naprawdę działa</span>.</h1>
+          <p class="lead">Oczyszczanie aktywne, terapie pielęgnacyjne i zabiegi laserowe. Najpierw diagnoza, potem plan — bez zgadywania.</p>
+          
+          <div style="margin-bottom: 24px; font-size: 14px; color: var(--muted); display:flex; gap:12px; align-items:center;">
+             <span style="color: var(--gold-strong); font-weight: 700;">150+</span> zadowolonych klientek w tym miesiącu 
+             <span style="opacity:0.4">|</span> 
+             <span style="color: var(--gold-strong); font-weight: 700;">5.0/5</span> na Booksy
+          </div>
+
+          <div class="cta-row">
+            <a class="cta" href="https://booksy.com/pl-pl/165360_mik-beauty_salon-kosmetyczny_18078_szczecin#ba_s=sr_1" target="_blank" rel="noopener">Umów wizytę</a>
+            <a class="ghost" href="tel:+48601827531">Zadzwoń</a>
+          </div>
+          <div class="badges">
+            <a class="badge" href="https://booksy.com/pl-pl/165360_mik-beauty_salon-kosmetyczny_18078_szczecin#ba_s=sr_1" target="_blank" rel="noopener"><span class="stars">★★★★★</span> Zobacz opinie na Booksy</a>
+            <a class="badge" href="https://www.instagram.com/mik__beauty/" target="_blank" rel="noopener">📷 Instagram</a>
+            <a class="badge" href="https://www.facebook.com/profile.php?id=100087314075394" target="_blank" rel="noopener">👍 Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="oferta" class="section">
+      <div class="container glass">
+        <h2 class="h2">Oferta</h2>
+        <div class="grid" id="ofertaGrid"></div>
+        <div class="cta-row" style="margin-top:24px">
+          <a class="cta" href="https://booksy.com/pl-pl/165360_mik-beauty_salon-kosmetyczny_18078_szczecin#ba_s=sr_1" target="_blank" rel="noopener">Sprawdź dostępne terminy</a>
+          <a class="ghost" href="tel:+48601827531">Krótka konsultacja telefoniczna</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="omnie" class="section">
+      <div class="container glass">
+        <div class="wrap">
+          <div>
+            <h2 class="h2">O mnie</h2>
+            <p class="muted">Nazywam się Kasia. Łączę pielęgnację gabinetową z nowoczesną technologią laserową. Najpierw uważnie słucham i diagnozuję, później układam spersonalizowany plan zabiegowy — tak, abyś szybko zobaczyła realną poprawę skóry.</p>
+            <div class="signature">Twoja zaufana ekspertka od piękna</div>
+          </div>
+          <figure class="about-photo" id="aboutPhoto" data-bg="assets/img/kasia.png">
+            <div class="ph" aria-hidden="true"></div>
+          </figure>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container glass">
+        <h2 class="h2" style="text-align:center">Zobacz różnicę</h2>
+        <p class="muted" style="text-align:center; max-width:500px; margin:0 auto 20px">Przesuń suwak, aby zobaczyć przykładowy efekt zabiegów laserowych.</p>
+        
+        <div class="comparison-slider">
+          <img src="assets/img/laser_po.webp" alt="Efekt po zabiegu" loading="lazy">
+          <div class="img-wrapper-before">
+             <img src="assets/img/peeling_weglowy.webp" alt="Przed zabiegiem" loading="lazy">
+          </div>
+          <div class="handle">
+            <div class="handle-circle">◄ ►</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="slider-range" aria-label="Porównanie przed i po">
+        </div>
+      </div>
+    </section>
+
+    <section id="opinie" class="section">
+      <div class="container glass">
+        <div class="row-head">
+          <h2 class="h2">Opinie</h2>
+          <a class="pill" href="https://booksy.com/pl-pl/165360_mik-beauty_salon-kosmetyczny_18078_szczecin#ba_s=sr_1" target="_blank" rel="noopener">Czytaj na Booksy →</a>
+        </div>
+
+        <div class="carousel" aria-label="Karuzela opinii">
+          <button class="navbtn nav-prev" aria-label="Poprzednia opinia">‹</button>
+          <div class="track" id="track"></div>
+          <button class="navbtn nav-next" aria-label="Następna opinia">›</button>
+          <div class="dots" id="dots" aria-hidden="true"></div>
+        </div>
+
+        <a class="booksy-rating" id="booksyBadge"
+           href="https://booksy.com/pl-pl/165360_mik-beauty_salon-kosmetyczny_18078_szczecin#ba_s=sr_1"
+           target="_blank" rel="noopener">
+          <div class="b-left">
+            <div class="b-title">Średnia ocen</div>
+            <div class="b-main"><span class="b-score">5.0</span><span class="b-max">/5</span></div>
+            <div class="b-sub"><span class="stars">★★★★★</span> na podstawie <span class="b-count">159</span> opinii</div>
+          </div>
+          <div class="b-right">Booksy →</div>
+        </a>
+      </div>
+    </section>
+
+    <section id="social" class="section">
+      <div class="container glass">
+        <div class="row-head">
+          <h2 class="h2">Social media</h2>
+          <div class="gold-strong">Zobacz moją codzienną pracę</div>
+        </div>
+
+        <div class="feed">
+          <img src="assets/img/peeling_weglowy.webp" alt="Peeling węglowy – efekty" loading="lazy" decoding="async">
+          <img src="assets/img/laser_po.webp" alt="Zabieg laserowy – po" loading="lazy" decoding="async">
+          <img src="assets/img/zabieg.webp" alt="Zabieg pielęgnacyjny" loading="lazy" decoding="async">
+          <img src="assets/img/zabieg1.webp" alt="Praca gabinetowa" loading="lazy" decoding="async">
+          <img src="assets/img/zabieg4.webp" alt="MiK Beauty — zza kulis" loading="lazy" decoding="async">
+        </div>
+
+        <div class="list">
+          <a class="item" href="https://www.instagram.com/mik__beauty/" target="_blank" rel="noopener">📷 @mik__beauty</a>
+          <a class="item" href="https://www.facebook.com/profile.php?id=100087314075394" target="_blank" rel="noopener">👍 Facebook</a>
+          <a class="item" href="https://booksy.com/pl-pl/165360_mik-beauty_salon-kosmetyczny_18078_szczecin#ba_s=sr_1" target="_blank" rel="noopener">⭐ Rezerwacje & opinie</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer" data-include="components/footer.html"></div>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img src="" alt="">
+    <button class="lb-prev" type="button" aria-label="Poprzednie">‹</button>
+    <button class="lb-next" type="button" aria-label="Następne">›</button>
+    <button class="lb-close" type="button" aria-label="Zamknij">×</button>
+  </div>
+
+  <script defer src="assets/app.js"></script>
+</body>
+</html>
