@@ -1,0 +1,74 @@
+/* ===== GLAMOUR PRICING CATALOG (GRID/ACCORDION) ===== */
+
+.pricing-catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.p-card {
+  background: #fff;
+  border: 1px solid rgba(200,167,90, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+.p-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(200,167,90, 0.12);
+  border-color: rgba(200,167,90, 0.5);
+}
+.p-card.active {
+  border-color: var(--gold);
+  box-shadow: 0 20px 50px rgba(200,167,90, 0.15);
+}
+.p-header {
+  padding: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  background: linear-gradient(180deg, #fff 0%, #fcfcfc 100%);
+}
+.p-icon {
+  width: 48px; height: 48px;
+  color: var(--gold-strong);
+  transition: transform 0.4s ease;
+}
+.p-card:hover .p-icon { transform: scale(1.1) rotate(-5deg); }
+.p-title {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+}
+.p-subtitle {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted);
+}
+.p-toggle-icon {
+  width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold-strong); font-size: 18px; transition: 0.3s; margin-top: 8px;
+}
+.p-card.active .p-toggle-icon { background: var(--gold); color: #fff; transform: rotate(180deg); }
+.p-content {
+  max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out;
+  background: #faf9f6; border-top: 1px solid rgba(200,167,90, 0.1);
+}
+.p-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 14px 20px; border-bottom: 1px solid rgba(0,0,0,0.04); font-size: 14px;
+}
+.p-row:last-child { border-bottom: none; }
+.p-row:hover { background: rgba(255,255,255,0.6); }
+.p-name { font-weight: 500; color: #444; padding-right: 12px; }
+.p-price { font-weight: 700; color: var(--gold-strong); white-space: nowrap; }
+
+@media (max-width: 600px) {
+  .pricing-catalog { grid-template-columns: 1fr; gap: 16px; }
+}
