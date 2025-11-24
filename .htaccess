@@ -1,0 +1,37 @@
+RewriteEngine On
+RewriteBase /
+
+# ----------------------------------------------------------------------
+# 1. PRZEKIEROWANIE NA HTTPS (BEZPIECZEŃSTWO I KŁÓDKA)
+# Jeśli masz certyfikat SSL, odkomentuj (usuń #) z 3 linii poniżej:
+# ----------------------------------------------------------------------
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ----------------------------------------------------------------------
+# 2. USUWANIE "index.html" Z ADRESU GŁÓWNEGO
+# Jeśli ktoś wpisze domena.pl/index.html, zmieni się na domena.pl
+# ----------------------------------------------------------------------
+RewriteCond %{THE_REQUEST} ^.*/index\.html
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+# ----------------------------------------------------------------------
+# 3. USUWANIE ".html" Z PODSTRON (ZEWNĘTRZNE)
+# Jeśli ktoś wpisze /cennik.html, przeglądarka zmieni adres na /cennik
+# ----------------------------------------------------------------------
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+
+# ----------------------------------------------------------------------
+# 4. OBSŁUGA ADRESÓW BEZ ROZSZERZENIA (WEWNĘTRZNE)
+# Serwer po cichu szuka pliku .html, gdy wpisano adres bez niego
+# ----------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# ----------------------------------------------------------------------
+# 5. OPCJONALNE: STRONY BŁĘDÓW (PREMIUM EXPERIENCE)
+# Warto stworzyć plik 404.html, aby błąd wyglądał elegancko
+# ----------------------------------------------------------------------
+ErrorDocument 404 /404.html
